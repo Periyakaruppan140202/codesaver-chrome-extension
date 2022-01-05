@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Save Code",
-  "version": "1.4",
-  "description": "Saves the Question and code in the browser page.",
+  "name": "CodeSaver",
+  "version": "1.6",
+  "description": "Saves problem description and your code",
   "permissions": ["downloads", "contextMenus", "tabs", "storage", "activeTab"],
   "browser_action": {
     "default_icon": {
@@ -20,7 +20,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": ["https://www.skillrack.com/*", "http://www.skillrack.com/"],
       "js": ["content.js"]
     }
   ],
